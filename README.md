@@ -9,7 +9,7 @@
   
   ## Setting Up the Home Page and the Database
   * [Setting Up the Basic App](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#setting-up-the-basic-app)
-  * [Making Models]
+  * [Making Models](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#making-models)
   * [Displaying the Database]
   * [Creating the Details Page]
   
