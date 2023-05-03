@@ -64,3 +64,34 @@ This part of the project was simply to make the model for the input form and to 
         content = {'form': form}  # Saves content to the template as a dictionary
         # Adds content of form to page
         return render(request, 'DanishTourism_AddLocation.html', content)
+        
+### Displaying the Database
+In this story, I created a Locations page that would display all items in the database. I added a function in views.py that would display the locations and used an HTML table and Django for loop to organize and display the locations. I would ideally have liked to add a filter function to this template, but was ultimately unable to due to the fact that the research I did on adding filters conflicted with the main app. I would love to do more research on this to be able to add a filter, as it would absolutely make my page more user-friendly.
+
+![](https://github.com/Michaelar1/Python_Live_Project/blob/main/gif_views/Locations.gif)
+
+    def displayLocations(request):
+      locations = Location.Locations.all()
+      content = {'locations': locations}
+      return render(request, 'DanishTourism_Locations.html', content)
+      
+    <table class="dt-locations-table">
+      <!-- Replace these with the Django-populated info -->
+      <tr id="dt-locations-headerRow">
+          <th>City</th>
+          <th>Location</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>View</th>
+      </tr>
+      {% for l in locations %}
+      <tr>
+          <td class="dt-locations-tdName"><a href="{% url 'DanishTourism_ViewDetails' l.pk %}">{{ l.name }}</a></td>
+          <td>{{ l.city }}</td>
+          <td>{{ l.type }}</td>
+          <td>{{ l.description }}</td>
+          <td><img src="{{ l.image }}" alt="{{ l.name }}"></td>
+      </tr>
+       {% endfor %}
+    </table>
+    
