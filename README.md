@@ -1,4 +1,5 @@
 # Python LiveProject
+## Introduction: 
   For two weeks toward the end of my tenure with The Tech Academy Software Development Bootcamp, I worked on a Live Project to develop a fully-functional web app using Python/Django. I found that this was a wonderful opportunity to find my strengths, hone in on what I needed to practice more, and to learn to use newer programming features on the fly. I really enjoyed this process and it gave me a lot more perspective on what will be required to succeed in my development career. 
   
   In this project, I created a Danish Tourism Web App that utilizes a database and CRUD capabilities. Users can catalog tourist attractions in various cities, view the locations, edit location information, and delete locations. The user can also find the top tour companies and search for flights to Denmark and the Faroe Islands.
