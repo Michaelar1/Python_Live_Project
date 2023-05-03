@@ -8,7 +8,7 @@
   Below, I have detailed the stories I worked on with code snippets and gifs to allow you to see the finished project.
   
   ## Setting Up the Home Page and the Database
-  * [Setting Up the Basic App]
+  * [Setting Up the Basic App](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#setting-up-the-basic-app)
   * [Making Models]
   * [Displaying the Database]
   * [Creating the Details Page]
