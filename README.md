@@ -14,4 +14,21 @@
   * [Creating the Details Page]
   
   ### Setting Up the Basic App
-    In this part of the project, I had to set up the base html code and home page, register URL patterns, and add some functionality and styling for the home page. In doing so, I set up the navbar and footer templates as well. My biggest challenge at this point was managing time versus my desire to make the styling perfect. However, I quickly learned to set better pacing for myself and perfected the look of my app toward the end of the project when I had more time.
+In this part of the project, I had to set up the base html code and home page, register URL patterns, and add some functionality and styling for the home page. In doing so, I set up the navbar and footer templates as well. My biggest challenge at this point was managing time versus my desire to make the styling perfect. However, I quickly learned to set better pacing for myself and perfected the look of my app toward the end of the project when I had more time.
+
+![](https://github.com/Michaelar1/Python_Live_Project/blob/main/gif_views/Home_Page.gif)
+
+    {% extends 'DanishTourism_base.html' %}
+
+    {% block title %}Danish Tourism App{% endblock %}
+
+    {% block header %}Welcome to the Danish Tourism App! &#9679; Velkommen til det Danske Turisme App!{% endblock %}
+
+    {% block content %}
+    <p>Do you dream of exploring Denmark? Let us help you make your dreams come true!</p>
+    {% load static %}<img src="{% static 'images/dannebrog.jpg' %}" class="dt-home-img" alt="Danish Flag">
+    <br>
+    <button class="dt-home-tourLink btn"><a href="{% url 'DanishTourism_tourWidget' %}" class="dt-home-tourLink">View Available Tours!</a></button>
+    <button class="dt-home-flightLink btn"><a href="{% url 'DanishTourism_PlanTrip' %}" class="dt-home-flightLink">Plan Your Trip!</a></button>
+
+    {% endblock %}
