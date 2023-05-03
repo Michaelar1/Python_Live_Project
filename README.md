@@ -40,16 +40,16 @@ This part of the project was simply to make the model for the input form and to 
 ![](https://github.com/Michaelar1/Python_Live_Project/blob/main/gif_views/Add_Location.gif)
 
     class Location(models.Model):
-    type = models.CharField(max_length=60, choices=TYPE_CHOICES)
-    name = models.CharField(max_length=60, default="", blank=True, null=False)
-    city = models.CharField(max_length=60, choices=CITY_CHOICES)
-    description = models.TextField(max_length=350, default="", blank=True)
-    image = models.CharField(max_length=1000, default="http://...")
+      type = models.CharField(max_length=60, choices=TYPE_CHOICES)
+      name = models.CharField(max_length=60, default="", blank=True, null=False)
+      city = models.CharField(max_length=60, choices=CITY_CHOICES)
+      description = models.TextField(max_length=350, default="", blank=True)
+      image = models.CharField(max_length=1000, default="http://...")
 
-    Locations = models.Manager()
+      Locations = models.Manager()
 
-    def __str__(self):
-        return self.name
+      def __str__(self):
+         return self.name
 
 
     # This function will render the Add Location page when requested
