@@ -67,7 +67,7 @@ This part of the project was simply to make the model for the input form and to 
         return render(request, 'DanishTourism_AddLocation.html', content)
         
 ### Displaying the Database
-In this story, I created a Locations page that would display all items in the database. I added a function in views.py that would display the locations and used an HTML table and Django for loop to organize and display the locations. I would ideally have liked to add a filter function to this template, but was ultimately unable to due to the fact that the research I did on adding filters conflicted with the main app. I would love to do more research on this to be able to add a filter, as it would absolutely make my page more user-friendly.
+In this story, I created a Locations page that would display all items in the database. I added a function in views.py that would display the locations and used an HTML table and Django for loop to organize and display the locations. I would ideally have liked to add a filter function to this template, but was ultimately unable to due to the fact that the research I did on adding filters conflicted with the main app. I would love to do more research on this to be able to add a filter, as it would absolutely make my page more user-friendly. I also would like to play with changing the display of the information from a table to a gallery, but due to time constraints wasn't able to complete this during the sprint. 
 
 ![](https://github.com/Michaelar1/Python_Live_Project/blob/main/gif_views/Locations.gif)
 
@@ -96,3 +96,20 @@ In this story, I created a Locations page that would display all items in the da
        {% endfor %}
     </table>
     
+### Creating the Details Page
+For this story, I added a details page that would query a single item from the database and display it. This would be accessible by clicking the name of the location on the locations page. 
+
+![](https://github.com/Michaelar1/Python_Live_Project/blob/main/gif_views/Details.gif)
+
+    def displayDetails(request, pk):
+      pk = int(pk)
+      item = get_object_or_404(Location, pk=pk)
+      return render(request, 'DanishTourism_ViewDetails.html', {'item': item})
+      
+    <div class="dt-view_details-details">
+      <h2 class="dt-view_details-itemName">{{ item.name }}</h2>
+      <img class="dt-view_details-itemImg" src="{{ item.image }}" alt="{{ item.name }}">
+      <p class="dt-view_details-itemType">{{ item.type }}</p>
+      <p class="dt-view_details-itemDescription">{{ item.description }}</p>
+      <p class="dt-view_details-itemCity">{{ item.city }}</p>
+    </div>
