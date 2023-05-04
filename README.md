@@ -12,7 +12,7 @@
   * [Setting Up the Basic App](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#setting-up-the-basic-app)
   * [Making Models](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#making-models)
   * [Displaying the Database](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#displaying-the-database)
-  * [Creating the Details Page]
+  * [Creating the Details Page](https://github.com/Michaelar1/Python_Live_Project/blob/main/README.md#creating-the-details-page)
   
 ### Setting Up the Basic App
 In this part of the project, I had to set up the base html code and home page, register URL patterns, and add some functionality and styling for the home page. In doing so, I set up the navbar and footer templates as well. My biggest challenge at this point was managing time versus my desire to make the styling perfect. However, I quickly learned to set better pacing for myself and perfected the look of my app toward the end of the project when I had more time.
